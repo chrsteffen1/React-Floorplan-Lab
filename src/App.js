@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Bath from './Bath';
+import Bedroom from './Bedroom';
+import Kitchen from './Kitchen';
+import LivingRoom from './LivingRoom';
 
-function App() {
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+      <div>
+        <Bedroom bedNum={'1'} />
+      </div>
+      <div>
+        <Kitchen />
+      </div>
+      <div>
+        <Bath size='Full' />
+      </div>
+      <div>
+      <Bedroom bedNum={'2'} />
+      </div>
+      <div>
+        <LivingRoom />
+      </div>
+      <div>
+        <Bath size='Half' />
+      </div>
+      <div>
+      <Bedroom bedNum={'3'} />
+      </div>
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
